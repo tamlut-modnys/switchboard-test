@@ -1,0 +1,20 @@
+[package]
+name = "btc-reader"
+version = "0.1.0"
+description = "A Solana program that reads BTC price from Switchboard"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "btc_reader"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.29.0"
+switchboard-on-demand = "0.1.8"
